@@ -13,3 +13,9 @@ skills
 
 weather or exchange
 footer
+
+
+
+this task will be separated into 2 branches:
+1. netlify
+2. development
