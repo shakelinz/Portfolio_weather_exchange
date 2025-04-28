@@ -15,7 +15,17 @@ the weather or the exchange calculator, or both side by side
 -----------
 register:
 all of these fields:
-  name, password, git, linkedin, email, age, title, about, skills, picture, checkbox of weather or exchange
+  name,
+   password,
+    git,
+     linkedin,
+      email,
+       age,
+        title
+        , about,
+         skills,
+          picture,
+           checkbox of weather or exchange
 
  login:
  2 fields:
