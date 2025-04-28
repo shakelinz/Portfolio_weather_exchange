@@ -7,6 +7,7 @@ name, git, linkedin, email, age, title, about, skills, picture, checkbox of weat
 main page with a lot of css:
 
 navbar 
+
 about
 details
 skills

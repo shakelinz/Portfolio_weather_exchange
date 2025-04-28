@@ -1,0 +1,22 @@
+pages:
+1. home
+2. register
+3. login
+------------
+home:
+only links to register and login pages at first
+after logging in, presents the whole portfolio and the chosen added weather and or exchange
+the portfolio:
+about paragraph
+all the details
+all the skills
+
+the weather or the exchange calculator, or both side by side
+-----------
+register:
+all of these fields:
+  name, password, git, linkedin, email, age, title, about, skills, picture, checkbox of weather or exchange
+
+ login:
+ 2 fields:
+ email and password
