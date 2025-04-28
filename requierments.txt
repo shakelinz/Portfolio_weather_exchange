@@ -1,0 +1,15 @@
+user based web.
+reg login
+the user can choose template like exchange, and portfolio 
+fields:
+name, git, linkedin, email, age, title, about, skills, picture, checkbox of weather or exchange
+
+main page with a lot of css:
+
+navbar 
+about
+details
+skills
+
+weather or exchange
+footer
