@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href=".//pages/styles/exchange.css">
+</head>
+<body>
+
+  <div class="container" id="sourceContainer">
+    <h3>From Currency</h3>
+    <div class="currency-row">
+      <label class="currency-label"><input type="checkbox" onchange="toggleInput(this)">usd</label>
+      <input type="number" class="currency-amount" min="0.01" step="0.01" disabled>
+    </div>
+    <div class="currency-row">
+      <label class="currency-label"><input type="checkbox" onchange="toggleInput(this)">il</label>
+      <input type="number" class="currency-amount" min="0.01" step="0.01" disabled>
+    </div>
+    <div class="currency-row">
+      <label class="currency-label"><input type="checkbox" onchange="toggleInput(this)">euro</label>
+      <input type="number" class="currency-amount" min="0.01" step="0.01" disabled>
+    </div>
+    <div class="currency-row">
+      <label class="currency-label"><input type="checkbox" onchange="toggleInput(this)">yen</label>
+      <input type="number" class="currency-amount" min="0.01" step="0.01" disabled>
+    </div>
+  </div>
+
+  <div class="container" id="targetContainer">
+    <h3>To Currency</h3>
+    <div class="currency-row">
+      <label class="currency-label"><input type="checkbox" onchange="convert()">usd</label>
+      <span class="converted"></span>
+    </div>
+    <div class="currency-row">
+      <label class="currency-label"><input type="checkbox" onchange="convert()">il</label>
+      <span class="converted"></span>
+    </div>
+    <div class="currency-row">
+      <label class="currency-label"><input type="checkbox" onchange="convert()">euro</label>
+      <span class="converted"></span>
+    </div>
+    <div class="currency-row">
+      <label class="currency-label"><input type="checkbox" onchange="convert()">yen</label>
+      <span class="converted"></span>
+    </div>
+  </div>
+
+  <script src=".//pages/scripts/exchange.js></script>
+</body>
+</html>
