@@ -14,7 +14,7 @@ const rates = {
   }
   
   function getSelectedCurrency(containerId) {
-    const container = document.getElementById("containerId");
+    const container = document.getElementById(containerId);
     const rows = container.querySelectorAll('.currency-row');
     for (const row of rows) {
       const checkbox = row.querySelector('input[type="checkbox"]');

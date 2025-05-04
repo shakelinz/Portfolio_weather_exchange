@@ -1,12 +1,12 @@
 import { User } from "./classes.js";
-let users = JSON.parse(localStorage.getItem("users"));
 // Making sure the button will load before the function
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("rgtBtn").addEventListener("click", register_handler);
 });
 
 // Function to insert the user details to the localstorage
-function register_handler(event) {
+async function register_handler(event) {
+  let users = JSON.parse(localStorage.getItem("users"));
   event.preventDefault();
   if (
     users.some(
@@ -45,11 +45,29 @@ function register_handler(event) {
     document.getElementById("education").value,
     document.getElementById("aboutParagraph").value,
     document.getElementById("skills").value.split(","),
-    document.getElementById("picture").value,
+    null,
     isWeather,
     isExchange
   );
+  newUser.pic = await convertImg();
   users.push(newUser);
   localStorage.setItem("users", JSON.stringify(users));
   document.location.href = "login.html";
+}
+
+// getting the picture
+function convertImg() {
+  const file = document.getElementById("picOption").files[0];
+  if (!file) {
+    return "../media/profileDefault.png";
+  } else {
+    return new Promise((res) => {
+      const reader = new FileReader();
+      reader.onloadend = function () {
+        const base64 = reader.result;
+        res(base64);
+      };
+      reader.readAsDataURL(file);
+    });
+  }
 }
