@@ -1,5 +1,5 @@
 export class User {
-    constructor(userId, fullName, password, email, github, linkedIn, age, education, aboutParagraph) {
+    constructor(userId, fullName, password, email, github, linkedIn, age, education, aboutParagraph, skills, picture, isWeather, isExchange) {
         this.userId = userId;
         this.fullName = fullName;
         this.password = password;
@@ -9,6 +9,10 @@ export class User {
         this.age = age;
         this.education = education;
         this.aboutParagraph = aboutParagraph;
+        this.skills = skills;
+        this.picture = picture;
+        this.isWeather = isWeather;
+        this.isExchange = isExchange;    
     }
 }
 

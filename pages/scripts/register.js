@@ -26,9 +26,14 @@ function register_handler(event) {
   } else {
     lastUserId = lastUserId.userId;
   }
-  if(document.getElementById("userOption").checked) {//manager pressed
-    isManager = true;
-}
+  let isWeather = false;
+  let isExchange = false;
+  if (document.getElementById("weather").checked) {
+    isWeather = true;
+  }
+  if (document.getElementById("exchange").checked) {
+    isExchange = true;
+  }
   let newUser = new User(
     lastUserId + 1,
     document.getElementById("fullName").value,
@@ -38,7 +43,11 @@ function register_handler(event) {
     document.getElementById("linkedIn").value,
     document.getElementById("age").value,
     document.getElementById("education").value,
-    document.getElementById("aboutParagraph").value
+    document.getElementById("aboutParagraph").value,
+    document.getElementById("skills").value.split(","),
+    document.getElementById("picture").value,
+    isWeather,
+    isExchange
   );
   users.push(newUser);
   localStorage.setItem("users", JSON.stringify(users));
