@@ -9,18 +9,147 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./styles/exchange.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
     <title>home</title>
   </head>
   <body>
     <!-- navbar div -->
-     <div id="navBar"></div>
-    <!-- home page container -->
+    <div id="navBar"></div>
+    <!-- home page without a user logged in -->
     <div id="containerHello" class="container mt-5">
       <h1>Welcome to the Home Page</h1>
       <!-- links to register and login pages -->
       <div class="mt-3">
         <a href="./register.html" class="btn btn-primary">Register</a>
         <a href="./login.html" class="btn btn-secondary">Login</a>
+      </div>
+    </div>
+
+    <!-- home page with a user logged in -->
+    <div id="containerUser">
+      <!-- portfolio section -->
+      <div id="containerPortfolio" class="container mt-5">
+        <h1>Portfolio</h1>
+        <div class="row" id="portfolioContainer"></div>
+      </div>
+
+      <!-- weather section -->
+      <div id="containerWeather">
+        <!-- radio choice for city -->
+        
+        <div class="card bg-light d-flex justify-content-center align-items-center vh-100">
+          <h1>Weather</h1>
+          <!-- radio div -->
+          <div class="col-md-4">
+            <div class="card" id="cityContainer">
+              <h3>Select a city</h3>
+              <div class="city-row">
+                <label class="city-label"
+                  ><input checked type="radio" name="city" value="Tel Aviv" />Tel Aviv</label
+                <label class="city-label"
+                  ><input type="radio" name="city" value="New York" />New York</label
+                <label class="city-label"
+                  ><input type="radio" name="city" value="Tokyo" />Tokyo</label
+                <label class="city-label"
+                  ><input type="radio" name="city" value="London" />London</label
+                <label class="city-label"
+                  ><input type="radio" name="city" value="Paris" />Paris</label>
+              </div>
+            </div>  
+          </div>
+          <!-- weather div -->
+          <div id="weather" class="card shadow p-4" id="weather-card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Loading weather...</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- exchange section -->
+      <div id="containerExchange">
+        <div class="container" id="sourceContainer">
+          <h1>Currency Exchange</h1>
+          <br>
+          <h3>From Currency</h3>
+          <div class="currency-row">
+            <label class="currency-label"
+              ><input type="radio" onchange="toggleInput(this)" />usd</label
+            >
+            <input
+              type="number"
+              class="currency-amount"
+              min="0.01"
+              step="0.01"
+              disabled
+            />
+          </div>
+          <div class="currency-row">
+            <label class="currency-label"
+              ><input type="radio" onchange="toggleInput(this)" />il</label
+            >
+            <input
+              type="number"
+              class="currency-amount"
+              min="0.01"
+              step="0.01"
+              disabled
+            />
+          </div>
+          <div class="currency-row">
+            <label class="currency-label"
+              ><input type="radio" onchange="toggleInput(this)" />euro</label
+            >
+            <input
+              type="number"
+              class="currency-amount"
+              min="0.01"
+              step="0.01"
+              disabled
+            />
+          </div>
+          <div class="currency-row">
+            <label class="currency-label"
+              ><input type="radio" onchange="toggleInput(this)" />yen</label
+            >
+            <input
+              type="number"
+              class="currency-amount"
+              min="0.01"
+              step="0.01"
+              disabled
+            />
+          </div>
+        </div>
+
+        <div class="container" id="targetContainer">
+          <h3>To Currency</h3>
+          <div class="currency-row">
+            <label class="currency-label"
+              ><input type="checkbox" onchange="convert()" />usd</label
+            >
+            <span class="converted"></span>
+          </div>
+          <div class="currency-row">
+            <label class="currency-label"
+              ><input type="checkbox" onchange="convert()" />il</label
+            >
+            <span class="converted"></span>
+          </div>
+          <div class="currency-row">
+            <label class="currency-label"
+              ><input type="checkbox" onchange="convert()" />euro</label
+            >
+            <span class="converted"></span>
+          </div>
+          <div class="currency-row">
+            <label class="currency-label"
+              ><input type="checkbox" onchange="convert()" />yen</label
+            >
+            <span class="converted"></span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -33,5 +162,9 @@
     <!-- navBar -->
     <script src="./scripts/navBar.js"></script>
     <script type="module" src="./scripts/home.js"></script>
+    <!-- weather script -->
+    <script src="./scripts/weather.js"></script>
+    <!-- exchange script -->
+    <script src="./scripts/exchange.js"></script>
   </body>
 </html>
