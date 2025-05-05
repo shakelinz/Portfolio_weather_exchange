@@ -7,9 +7,8 @@ function login(event) {
   let user = users.find((u) => u.email === email && u.password === password);
   if (user) {
     localStorage.setItem("currentUser", JSON.stringify(user));
-    document.location.href = "index.html";
+    document.location.href = "home.html";
   } else {
     alert("Invalid email or password");
   }
-    
 }

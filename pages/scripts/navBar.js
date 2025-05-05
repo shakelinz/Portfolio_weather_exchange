@@ -28,10 +28,8 @@ navBar.innerHTML = `
 
 // If someone is logged in, update navbar
 if (currentUser) {
-    // manager info
-    let managerInfo = currentUser.isManager ? " the Manager" : "";
   document.getElementById("userInfo").innerHTML = `
-          <span class="me-2">Welcome, <strong>${currentUser.username} ${managerInfo}</strong></span>
+          <span class="me-2">Welcome, <strong>${currentUser.fullName} </strong></span>
           <button class="btn btn-outline-danger ms-3" onclick="logout()">Logout</button>
       `;
   // Hide register and login links
@@ -43,7 +41,7 @@ if (currentUser) {
 function logout() {
     let users = JSON.parse(localStorage.getItem("users"));
     users = users.map((user) =>
-      user.username == currentUser.username ? currentUser : user
+      user.fullName == currentUser.fullName ? currentUser : user
     );
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.removeItem("currentUser");

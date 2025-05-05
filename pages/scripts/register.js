@@ -38,7 +38,7 @@ async function register_handler(event) {
     lastUserId + 1,
     document.getElementById("fullName").value,
     document.getElementById("password").value,
-    document.getElementById("email"),
+    document.getElementById("email").value,
     document.getElementById("github").value,
     document.getElementById("linkedIn").value,
     document.getElementById("age").value,
@@ -49,7 +49,7 @@ async function register_handler(event) {
     isWeather,
     isExchange
   );
-  newUser.pic = await convertImg();
+  newUser.picture = await convertImg();
   users.push(newUser);
   localStorage.setItem("users", JSON.stringify(users));
   document.location.href = "login.html";
