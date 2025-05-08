@@ -1,20 +1,41 @@
-export function fillPortfolio() {
-    let currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    if(!currentUser) {//not logged in
-        alert("You are not logged in. Please log in to view your portfolio.");
-        return;
-    }else {//logged in
-        document.getElementById("profilePicture").src = currentUser.picture;
-        document.getElementById("fullName").innerText = currentUser.fullName;
-        document.getElementById("ageValue").innerText = currentUser.age;
-        document.getElementById("emailValue").innerText = currentUser.email;
-        document.getElementById("emailValue").href = `mailto:${currentUser.email}`;
-        document.getElementById("githubValue").innerText = currentUser.github;
-        document.getElementById("githubValue").href = `http://${currentUser.github}`;
-        document.getElementById("linkedInValue").innerText = currentUser.linkedIn;
-        document.getElementById("linkedInValue").href = `http://${currentUser.linkedIn}`;
-        document.getElementById("educationValue").innerText = currentUser.education;
-        document.getElementById("aboutMe").innerText = currentUser.aboutParagraph;
-        document.getElementById("skills").innerText = currentUser.skills;
+export function fillPortfolio(id) {
+  let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  if (!currentUser) {
+    //not logged in
+    alert("You are not logged in. Please log in to view your portfolio.");
+    return;
+  } else {
+    //logged in
+    const container = document.getElementById(`containerPortfolio${id}`);
+    container.querySelector("#fullName").innerText = currentUser.fullName;
+    container.querySelector("#ageValue").innerText = currentUser.age;
+    container.querySelector("#emailValue").innerText = currentUser.email;
+    container.querySelector("#emailValue").href = `mailto:${currentUser.email}`;
+    container.querySelector("#githubValue").innerText = currentUser.github;
+    container.querySelector("#githubValue").href =
+      `http://${currentUser.github}`;
+    container.querySelector("#linkedInValue").innerText =
+      currentUser.linkedIn;
+      container.querySelector("#linkedInValue").href =
+      `http://${currentUser.linkedIn}`;
+    container.querySelector("#educationValue").innerText =
+        currentUser.education;
+    container.querySelector("#aboutMe").innerText = currentUser.aboutParagraph;
+    container.querySelector("#skills").innerText = currentUser.skills;
+    container.querySelector("#profilePicture").src = currentUser.picture;
+  }
+}
+
+const radioButtons = document.querySelectorAll('input[name="options"]');
+export function updateVisiblePortfolio() {
+  radioButtons.forEach((radio) => {
+    const container = document.getElementById(
+      `containerPortfolio${radio.value}`
+    );
+    if (radio.checked) {
+      container.style.display = "block";
+    } else {
+      container.style.display = "none";
     }
+  });
 }

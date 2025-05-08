@@ -29,12 +29,48 @@
     <!-- home page with a user logged in -->
     <div id="containerUser">
       <!-- portfolio section -->
-      <div id="containerPortfolio">
-        <div class="row">
-          <h1 class="d-flex justify-content-center align-items-center">
-            Portfolio
-          </h1>
-        </div>
+      <div class="row">
+        <h1 class="d-flex justify-content-center align-items-center">
+          Portfolio
+        </h1>
+      </div>
+      <form
+      id="form"
+      class="d-flex justify-content-center align-items-center flex-column"
+    >
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="options"
+          id="option1"
+          value="1"
+          checked
+        />
+        <label class="form-check-label" for="option1">Option 1</label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="options"
+          id="option2"
+          value="2"
+        />
+        <label class="form-check-label" for="option2">Option 2</label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="options"
+          id="option3"
+          value="3"
+        />
+        <label class="form-check-label" for="option3">Option 3</label>
+      </div>
+    </form>
+      <div id="containerPortfolio1">
         <!-- block of the pic on the left and name on the right -->
         <div class="row" id="titlePicAndFullName">
           <div
@@ -52,14 +88,13 @@
             <h2 id="fullName">Full Name</h2>
           </div>
         </div>
-        <br />
 
         <div class="row">
           <!-- left column with details -->
           <div
             class="col-md-4 d-flex justify-content-center align-items-center"
           >
-            <div class="card bg-light" id="detailsContainer">
+            <div id="detailsContainer">
               <p id="age">
                 age:
                 <span id="ageValue"> </span>
@@ -90,14 +125,16 @@
           </div>
           <!-- right column with about and skills -->
           <div
-            class="col-md-4 d-flex justify-content-center align-items-center"
+            class="col-md-6 d-flex justify-content-center align-items-center"
           >
-            <div class="card bg-light" id="aboutContainer">
+            <div id="aboutContainer">
               <h3>About Me</h3>
               <p id="aboutMe">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
+              <br>
+              <br>
               <h3>skills</h3>
               <p id="skills">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
@@ -107,6 +144,83 @@
           </div>
         </div>
       </div>
+      <div id="containerPortfolio2">
+        <!-- block of the pic on the left and name on the right -->
+        <div class="row" id="titlePicAndFullName">
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <img
+              id="profilePicture"
+              alt="Profile Picture"
+              class="img-fluid rounded-circle h-50 w-30"
+            />
+          </div>
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <h2 id="fullName">Full Name</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- left column with about -->
+          <div
+            class="col-md-6 d-flex justify-content-center align-items-center"
+          >
+            <div id="aboutContainer">
+              <h3>About Me</h3>
+              <p id="aboutMe">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              
+            </div>
+          </div>
+          <!-- right column with details and skills -->
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <div id="detailsContainer">
+              <p id="age">
+                age:
+                <span id="ageValue"> </span>
+              </p>
+              <p id="email">
+                Email:
+                <span>
+                  <a href="mailto:" id="emailValue"></a>
+                </span>
+              </p>
+              <p id="github">
+                github:
+                <span>
+                  <a href="http://" id="githubValue"></a>
+                </span>
+              </p>
+              <p id="linkedIn">
+                linkedIn:
+                <span>
+                  <a href="http://" id="linkedInValue"></a>
+                </span>
+              </p>
+              <p id="education">
+                education:
+                <span id="educationValue"> </span>
+              </p>
+              <h3>skills</h3>
+              <p id="skills">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="containerPortfolio3"></div>
 
       <!-- weather section -->
       <div id="containerWeather">

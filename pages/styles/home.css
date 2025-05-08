@@ -6,3 +6,24 @@
     width: 100%;
     height: 100vh;
 }
+#titlePicAndFullName {
+    background-color: rgb(83, 83, 248);
+}
+#detailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 100vh;
+    background-color: #9bd5ec;
+}
+#aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #c4d6dd;
+}

@@ -1,5 +1,13 @@
 import {initLocalStorage} from "./classes.js";
-import {fillPortfolio} from "./portfolio.js";
+import {fillPortfolio, updateVisiblePortfolio} from "./portfolio.js";
+const radioButtons = document.querySelectorAll('input[name="options"]');
+
+radioButtons.forEach(radio => {
+  radio.addEventListener('change', () => {
+    updateVisiblePortfolio();
+    fillPortfolio(radio.value);
+  });
+});
 initLocalStorage();
 let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 if(!currentUser) {//not logged in
@@ -9,7 +17,8 @@ if(!currentUser) {//not logged in
 }else {//logged in
     document.getElementById("containerHello").style.display = "none";
     document.getElementById("containerUser").style.display = "block";
-    fillPortfolio();
+    updateVisiblePortfolio();
+    fillPortfolio(1);
     if(currentUser.isWeather) {
         document.getElementById("containerWeather").style.display = "block";
     }else {
