@@ -6,6 +6,8 @@ const rates = {
   };
   
   function toggleInput(checkbox) {
+    // disable the whole row if the checkbox is unchecked
+    const allRows = document.querySelectorAll('#sourceContainer .currency-row');
     const row = checkbox.closest('.currency-row');
     const input = row.querySelector('input[type="number"]');
     input.disabled = !checkbox.checked;

@@ -1,4 +1,5 @@
 import {initLocalStorage} from "./classes.js";
+import {fillPortfolio} from "./portfolio.js";
 initLocalStorage();
 let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 if(!currentUser) {//not logged in
@@ -8,6 +9,7 @@ if(!currentUser) {//not logged in
 }else {//logged in
     document.getElementById("containerHello").style.display = "none";
     document.getElementById("containerUser").style.display = "block";
+    fillPortfolio();
     if(currentUser.isWeather) {
         document.getElementById("containerWeather").style.display = "block";
     }else {

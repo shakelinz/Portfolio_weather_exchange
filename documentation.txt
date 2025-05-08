@@ -7,9 +7,9 @@ home:
 only links to register and login pages at first
 after logging in, presents the whole portfolio and the chosen added weather and or exchange
 the portfolio:
-about paragraph
-all the details
-all the skills
+title of the picture on the left and name on the right
+left column of age, email,  github and linkedin, then education
+and right column of about and skills
 
 the weather or the exchange calculator, or both side by side
 -----------

@@ -29,16 +29,93 @@
     <!-- home page with a user logged in -->
     <div id="containerUser">
       <!-- portfolio section -->
-      <div id="containerPortfolio" class="container mt-5">
-        <h1>Portfolio</h1>
-        <div class="row" id="portfolioContainer"></div>
+      <div id="containerPortfolio">
+        <div class="row">
+          <h1 class="d-flex justify-content-center align-items-center">
+            Portfolio
+          </h1>
+        </div>
+        <!-- block of the pic on the left and name on the right -->
+        <div class="row" id="titlePicAndFullName">
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <img
+              id="profilePicture"
+              src="https://via.placeholder.com/150"
+              alt="Profile Picture"
+              class="img-fluid rounded-circle h-50 w-30"
+            />
+          </div>
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <h2 id="fullName">Full Name</h2>
+          </div>
+        </div>
+        <br />
+
+        <div class="row">
+          <!-- left column with details -->
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <div class="card bg-light" id="detailsContainer">
+              <p id="age">
+                age:
+                <span id="ageValue"> </span>
+              </p>
+              <p id="email">
+                Email:
+                <span>
+                  <a href="mailto:" id="emailValue"></a>
+                </span>
+              </p>
+              <p id="github">
+                github:
+                <span>
+                  <a href="http://" id="githubValue"></a>
+                </span>
+              </p>
+              <p id="linkedIn">
+                linkedIn:
+                <span>
+                  <a href="http://" id="linkedInValue"></a>
+                </span>
+              </p>
+              <p id="education">
+                education:
+                <span id="educationValue"> </span>
+              </p>
+            </div>
+          </div>
+          <!-- right column with about and skills -->
+          <div
+            class="col-md-4 d-flex justify-content-center align-items-center"
+          >
+            <div class="card bg-light" id="aboutContainer">
+              <h3>About Me</h3>
+              <p id="aboutMe">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <h3>skills</h3>
+              <p id="skills">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- weather section -->
       <div id="containerWeather">
         <!-- radio choice for city -->
-        
-        <div class="card bg-light d-flex justify-content-center align-items-center vh-100">
+
+        <div
+          class="card bg-light d-flex justify-content-center align-items-center vh-100"
+        >
           <h1>Weather</h1>
           <!-- radio div -->
           <div class="col-md-4">
@@ -46,17 +123,32 @@
               <h3>Select a city</h3>
               <div class="city-row">
                 <label class="city-label"
-                  ><input checked type="radio" name="city" value="Tel Aviv" />Tel Aviv</label
+                  ><input
+                    checked
+                    type="radio"
+                    name="city"
+                    value="Tel Aviv"
+                  />Tel Aviv</label
+                >
                 <label class="city-label"
-                  ><input type="radio" name="city" value="New York" />New York</label
+                  ><input type="radio" name="city" value="New York" />New
+                  York</label
+                >
                 <label class="city-label"
                   ><input type="radio" name="city" value="Tokyo" />Tokyo</label
+                >
                 <label class="city-label"
-                  ><input type="radio" name="city" value="London" />London</label
+                  ><input
+                    type="radio"
+                    name="city"
+                    value="London"
+                  />London</label
+                >
                 <label class="city-label"
-                  ><input type="radio" name="city" value="Paris" />Paris</label>
+                  ><input type="radio" name="city" value="Paris" />Paris</label
+                >
               </div>
-            </div>  
+            </div>
           </div>
           <!-- weather div -->
           <div id="weather" class="card shadow p-4" id="weather-card">
@@ -71,11 +163,11 @@
       <div id="containerExchange">
         <div class="container" id="sourceContainer">
           <h1>Currency Exchange</h1>
-          <br>
+          <br />
           <h3>From Currency</h3>
           <div class="currency-row">
             <label class="currency-label"
-              ><input type="radio" onchange="toggleInput(this)" />usd</label
+              ><input type="radio" name="currencyType" onchange="toggleInput(this)" />usd</label
             >
             <input
               type="number"
@@ -87,7 +179,7 @@
           </div>
           <div class="currency-row">
             <label class="currency-label"
-              ><input type="radio" onchange="toggleInput(this)" />il</label
+              ><input type="radio" name="currencyType" onchange="toggleInput(this)" />il</label
             >
             <input
               type="number"
@@ -99,7 +191,7 @@
           </div>
           <div class="currency-row">
             <label class="currency-label"
-              ><input type="radio" onchange="toggleInput(this)" />euro</label
+              ><input type="radio" name="currencyType" onchange="toggleInput(this)" />euro</label
             >
             <input
               type="number"
@@ -111,7 +203,7 @@
           </div>
           <div class="currency-row">
             <label class="currency-label"
-              ><input type="radio" onchange="toggleInput(this)" />yen</label
+              ><input type="radio" name="currencyType" onchange="toggleInput(this)" />yen</label
             >
             <input
               type="number"
