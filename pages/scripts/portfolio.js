@@ -13,11 +13,11 @@ export function fillPortfolio(id) {
     container.querySelector("#emailValue").href = `mailto:${currentUser.email}`;
     container.querySelector("#githubValue").innerText = currentUser.github;
     container.querySelector("#githubValue").href =
-      `http://${currentUser.github}`;
+      `${currentUser.github}`;
     container.querySelector("#linkedInValue").innerText =
       currentUser.linkedIn;
       container.querySelector("#linkedInValue").href =
-      `http://${currentUser.linkedIn}`;
+      `${currentUser.linkedIn}`;
     container.querySelector("#educationValue").innerText =
         currentUser.education;
     container.querySelector("#aboutMe").innerText = currentUser.aboutParagraph;
