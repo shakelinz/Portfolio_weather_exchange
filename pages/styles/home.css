@@ -62,11 +62,20 @@ a {
   height: 100vh;
   background-color: #2ba7d8;
 }
+span {
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 #detailsContainer p {
   margin: 0.5rem 0;
   color: #e0e0e0;
   font-size: 1.05rem;
+  text-align: center;
 }
 
 #detailsContainer a {
@@ -76,8 +85,7 @@ a {
 
 /* ========== Portfolio Sections ========== */
 #containerPortfolio1,
-#containerPortfolio2,
-#containerPortfolio3 {
+#containerPortfolio2 {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
