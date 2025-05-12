@@ -1,29 +1,166 @@
-#containerExchange {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap");
+
+/* ========== Global Styles ========== */
+body {
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(135deg, #0f0f1b 0%, #1f1f2e 100%);
+  color: #ffffff;
 }
+
+h1, h2, h3 {
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ========== Navbar ========== */
+#navBar {
+  background-color: #343a40;
+  padding: 1rem;
+  color: white;
+}
+
+/* ========== Title Section ========== */
 #titlePicAndFullName {
-    background-color: rgb(83, 83, 248);
+  background-color: rgb(83, 83, 248);
 }
-#detailsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-    height: 100vh;
-    background-color: #9bd5ec;
-}
+
+/* ========== About Section ========== */
 #aboutContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-color: #c4d6dd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+#aboutContainer p {
+  color: #e0e0e0;
+  font-size: 1.05rem;
+}
+
+#aboutContainer h3 {
+  margin-top: 1rem;
+}
+
+/* ========== Details Section ========== */
+#detailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 100vh;
+  background-color: #2ba7d8;
+}
+
+#detailsContainer p {
+  margin: 0.5rem 0;
+  color: #e0e0e0;
+  font-size: 1.05rem;
+}
+
+#detailsContainer a {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+/* ========== Portfolio Sections ========== */
+#containerPortfolio1,
+#containerPortfolio2,
+#containerPortfolio3 {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1), 0 0 40px rgba(0, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+#containerPortfolio1:hover,
+#containerPortfolio2:hover,
+#containerPortfolio3:hover {
+  transform: scale(1.01);
+}
+
+/* ========== Profile Picture ========== */
+#profilePicture {
+  border-radius: 50%;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+  object-fit: cover;
+}
+
+/* ========== Weather Section ========== */
+#containerWeather .card {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.city-label {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* ========== Exchange Section ========== */
+#containerExchange {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  color: #2e8b4a;
+  border-radius: 10px;
+  max-width: 900px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.currency-row {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.currency-label {
+  width: 100px;
+  font-weight: bold;
+}
+
+.currency-amount,
+.converted {
+  flex: 1;
+  padding-left: 1rem;
+}
+
+/* ========== Forms & Misc ========== */
+.form-check {
+  margin: 1rem;
+}
+
+.vh-100 {
+  min-height: 100vh;
+}
+
+/* ========== General Layout Containers ========== */
+#containerHello,
+#containerUser {
+  margin-top: 3rem;
 }

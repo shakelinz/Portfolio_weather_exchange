@@ -9,8 +9,8 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./styles/exchange.css" />
     <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/exchange.css" />
     <title>home</title>
   </head>
   <body>
@@ -38,7 +38,7 @@
       <form
       id="form"
       class="d-flex justify-content-center align-items-center flex-column"
-    >
+      >
       <div class="form-check">
         <input
           class="form-check-input"
@@ -59,16 +59,6 @@
           value="2"
         />
         <label class="form-check-label" for="option2">Option 2</label>
-      </div>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="options"
-          id="option3"
-          value="3"
-        />
-        <label class="form-check-label" for="option3">Option 3</label>
       </div>
     </form>
       <div id="containerPortfolio1">
@@ -97,29 +87,29 @@
           >
             <div id="detailsContainer">
               <p id="age">
-                age:
+                <strong>age:</strong>
                 <span id="ageValue"> </span>
               </p>
               <p id="email">
-                Email:
+                <strong>Email:</strong>
                 <span>
                   <a href="mailto:" id="emailValue"></a>
                 </span>
               </p>
               <p id="github">
-                github:
+                <strong>github:</strong>
                 <span>
                   <a href="http://" id="githubValue"></a>
                 </span>
               </p>
               <p id="linkedIn">
-                linkedIn:
+                <strong>linkedIn:</strong>
                 <span>
                   <a href="http://" id="linkedInValue"></a>
                 </span>
               </p>
               <p id="education">
-                education:
+                <strong>education:</strong>
                 <span id="educationValue"> </span>
               </p>
             </div>
@@ -149,6 +139,11 @@
         <!-- block of the pic on the left and name on the right -->
         <div class="row" id="titlePicAndFullName">
           <div
+            class="col-md-6 d-flex justify-content-center align-items-center"
+          >
+            <h2 id="fullName">Full Name</h2>
+          </div>
+          <div
             class="col-md-4 d-flex justify-content-center align-items-center"
           >
             <img
@@ -156,11 +151,6 @@
               alt="Profile Picture"
               class="img-fluid rounded-circle h-50 w-30"
             />
-          </div>
-          <div
-            class="col-md-4 d-flex justify-content-center align-items-center"
-          >
-            <h2 id="fullName">Full Name</h2>
           </div>
         </div>
 
@@ -184,29 +174,29 @@
           >
             <div id="detailsContainer">
               <p id="age">
-                age:
+                <strong>age:</strong>
                 <span id="ageValue"> </span>
               </p>
               <p id="email">
-                Email:
+                <strong>Email:</strong>
                 <span>
                   <a href="mailto:" id="emailValue"></a>
                 </span>
               </p>
               <p id="github">
-                github:
+                <strong>github:</strong>
                 <span>
                   <a href="http://" id="githubValue"></a>
                 </span>
               </p>
               <p id="linkedIn">
-                linkedIn:
+                <strong>linkedIn:</strong>
                 <span>
                   <a href="http://" id="linkedInValue"></a>
                 </span>
               </p>
               <p id="education">
-                education:
+                <strong>education:</strong>
                 <span id="educationValue"> </span>
               </p>
               <h3>skills</h3>
@@ -221,7 +211,6 @@
 
       </div>
 
-      <div id="containerPortfolio3"></div>
 
       <!-- weather section -->
       <div id="containerWeather">
@@ -232,7 +221,7 @@
         >
           <h1>Weather</h1>
           <!-- radio div -->
-          <div class="col-md-4">
+          <div class="col-md-7">
             <div class="card" id="cityContainer">
               <h3>Select a city</h3>
               <div class="city-row">
