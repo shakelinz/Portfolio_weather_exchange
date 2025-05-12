@@ -11,11 +11,8 @@ export function fillPortfolio(id) {
     container.querySelector("#ageValue").innerText = currentUser.age;
     container.querySelector("#emailValue").innerText = currentUser.email;
     container.querySelector("#emailValue").href = `mailto:${currentUser.email}`;
-    container.querySelector("#githubValue").innerText = currentUser.github;
     container.querySelector("#githubValue").href =
       `${currentUser.github}`;
-    container.querySelector("#linkedInValue").innerText =
-      currentUser.linkedIn;
       container.querySelector("#linkedInValue").href =
       `${currentUser.linkedIn}`;
     container.querySelector("#educationValue").innerText =

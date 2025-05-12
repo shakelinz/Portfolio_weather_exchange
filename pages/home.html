@@ -14,7 +14,6 @@
     <title>home</title>
   </head>
   <body>
-    
     <!-- navbar div -->
     <div id="navBar"></div>
     <!-- home page without a user logged in -->
@@ -28,321 +27,390 @@
     </div>
 
     <!-- home page with a user logged in -->
-    <div id="containerUser">
-      <!-- portfolio section -->
-      <div class="row">
-        <h1 class="d-flex justify-content-center align-items-center">
-          Portfolio
-        </h1>
-      </div>
-      <form
-      id="form"
-      class="d-flex justify-content-center align-items-center flex-column"
-      >
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="options"
-          id="option1"
-          value="1"
-          checked
-        />
-        <label class="form-check-label" for="option1">Option 1</label>
-      </div>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="radio"
-          name="options"
-          id="option2"
-          value="2"
-        />
-        <label class="form-check-label" for="option2">Option 2</label>
-      </div>
-    </form>
-      <div id="containerPortfolio1">
-        <!-- block of the pic on the left and name on the right -->
-        <div class="row" id="titlePicAndFullName">
+    <div id="allContent">
+      <div class="d-flex" style="display: none">
+        <div id="sideBar">
           <div
-            class="col-md-4 d-flex justify-content-center align-items-center"
+            class="sidebar d-flex flex-column p-3 text-white bg-dark sticky-top"
+            style="width: 200px; height: 100vh"
           >
-            <img
-              id="profilePicture"
-              alt="Profile Picture"
-              class="img-fluid rounded-circle h-50 w-30"
-            />
-          </div>
-          <div
-            class="col-md-4 d-flex justify-content-center align-items-center"
-          >
-            <h2 id="fullName">Full Name</h2>
+            <h4>Navigation</h4>
+            <a href="#containerUser" class="btn btn-outline-light my-1"
+              >Portfolio</a
+            >
+            <a href="#titlePicAndFullName" class="btn btn-outline-light my-1"
+              >Name</a
+            >
+            <a href="#aboutContainer" class="btn btn-outline-light my-1"
+              >About</a
+            >
+            <a href="#skillsContainer" class="btn btn-outline-light my-1"
+              >Skills</a
+            >
+            <a href="#detailsContainer" class="btn btn-outline-light my-1"
+              >Details</a
+            >
+            <a href="#containerWeather" class="btn btn-outline-light my-1"
+              >Weather</a
+            >
+            <a href="#containerExchange" class="btn btn-outline-light my-1"
+              >Exchange</a
+            >
           </div>
         </div>
+        <div id="containerUser" class="flex-grow-1">
+          <!-- portfolio section -->
+          <div class="row">
+            <h1 class="d-flex justify-content-center align-items-center portfolio-title">
+              Portfolio
+            </h1>
+          </div>
+          <form
+            id="form"
+            class="d-flex justify-content-center align-items-center flex-column"
+          >
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="options"
+                id="option1"
+                value="1"
+                checked
+              />
+              <label class="form-check-label" for="option1">Web spread</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="options"
+                id="option2"
+                value="2"
+              />
+              <label class="form-check-label" for="option2">Paper like cv</label>
+            </div>
+          </form>
+          <div id="containerPortfolio1">
+            <!-- block of the pic on the left and name on the right -->
+            <div class="row portfolio-item" id="titlePicAndFullName">
+              <div
+                class="col-md-6 d-flex justify-content-center align-items-center"
+              >
+                <img
+                  id="profilePicture"
+                  alt="Profile Picture"
+                  class="img-fluid rounded-circle h-50 w-30 portfolio-image"
+                />
+              </div>
+              <div
+                class="col-md-6 d-flex justify-content-center align-items-center"
+              >
+                <h1 id="fullName" class="portfolio-title">Full Name</h1>
+              </div>
+            </div>
 
-        <div class="row">
-          <!-- left column with details -->
-          <div
-            class="col-md-4 d-flex justify-content-center align-items-center"
-          >
-            <div id="detailsContainer">
-              <p id="age">
-                <strong>age:</strong>
-                <span id="ageValue"> </span>
-              </p>
-              <p id="email">
-                <strong>Email:</strong>
-                <span>
-                  <a href="mailto:" id="emailValue"></a>
-                </span>
-              </p>
-              <p id="github">
-                <strong>github:</strong>
-                <span>
-                  <a href="http://" id="githubValue"></a>
-                </span>
-              </p>
-              <p id="linkedIn">
-                <strong>linkedIn:</strong>
-                <span>
-                  <a href="http://" id="linkedInValue"></a>
-                </span>
-              </p>
-              <p id="education">
-                <strong>education:</strong>
-                <span id="educationValue"> </span>
-              </p>
+            <div class="row portfolio-item">
+              <div id="aboutContainer">
+                <h3 class="portfolio-title">About Me</h3>
+                <p id="aboutMe" class="portfolio-description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <br />
+                <br />
+              </div>
             </div>
-          </div>
-          <!-- right column with about and skills -->
-          <div
-            class="col-md-6 d-flex justify-content-center align-items-center"
-          >
-            <div id="aboutContainer">
-              <h3>About Me</h3>
-              <p id="aboutMe">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <br>
-              <br>
-              <h3>skills</h3>
-              <p id="skills">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="containerPortfolio2">
-        <!-- block of the pic on the left and name on the right -->
-        <div class="row" id="titlePicAndFullName">
-          <div
-            class="col-md-6 d-flex justify-content-center align-items-center"
-          >
-            <h2 id="fullName">Full Name</h2>
-          </div>
-          <div
-            class="col-md-4 d-flex justify-content-center align-items-center"
-          >
-            <img
-              id="profilePicture"
-              alt="Profile Picture"
-              class="img-fluid rounded-circle h-50 w-30"
-            />
-          </div>
-        </div>
-
-        <div class="row">
-          <!-- left column with about -->
-          <div
-            class="col-md-6 d-flex justify-content-center align-items-center"
-          >
-            <div id="aboutContainer">
-              <h3>About Me</h3>
-              <p id="aboutMe">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              
-            </div>
-          </div>
-          <!-- right column with details and skills -->
-          <div
-            class="col-md-4 d-flex justify-content-center align-items-center"
-          >
-            <div id="detailsContainer">
-              <p id="age">
-                <strong>age:</strong>
-                <span id="ageValue"> </span>
-              </p>
-              <p id="email">
-                <strong>Email:</strong>
-                <span>
-                  <a href="mailto:" id="emailValue"></a>
-                </span>
-              </p>
-              <p id="github">
-                <strong>github:</strong>
-                <span>
-                  <a href="http://" id="githubValue"></a>
-                </span>
-              </p>
-              <p id="linkedIn">
-                <strong>linkedIn:</strong>
-                <span>
-                  <a href="http://" id="linkedInValue"></a>
-                </span>
-              </p>
-              <p id="education">
-                <strong>education:</strong>
-                <span id="educationValue"> </span>
-              </p>
-              <h3>skills</h3>
-              <p id="skills">
+            <div
+              id="skillsContainer"
+              class="row d-flex justify-content-center align-items-center portfolio-item"
+            >
+              <h3 class="portfolio-title d-flex justify-content-center align-items-center">skills</h3>
+              <p id="skills" class="portfolio-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- weather section -->
-      <div id="containerWeather">
-        <!-- radio choice for city -->
-
-        <div
-          class="card bg-light d-flex justify-content-center align-items-center vh-100"
-        >
-          <h1>Weather</h1>
-          <!-- radio div -->
-          <div class="col-md-7">
-            <div class="card" id="cityContainer">
-              <h3>Select a city</h3>
-              <div class="city-row">
-                <label class="city-label"
-                  ><input
-                    checked
-                    type="radio"
-                    name="city"
-                    value="Tel Aviv"
-                  />Tel Aviv</label
-                >
-                <label class="city-label"
-                  ><input type="radio" name="city" value="New York" />New
-                  York</label
-                >
-                <label class="city-label"
-                  ><input type="radio" name="city" value="Tokyo" />Tokyo</label
-                >
-                <label class="city-label"
-                  ><input
-                    type="radio"
-                    name="city"
-                    value="London"
-                  />London</label
-                >
-                <label class="city-label"
-                  ><input type="radio" name="city" value="Paris" />Paris</label
-                >
+            <div class="row portfolio-item">
+              <!-- left column with details -->
+              <div
+                id="detailsContainer"
+                class="col-md-4 d-flex justify-content-center align-items-center"
+              >
+                <p id="age" class="portfolio-title">
+                  <strong>age:</strong>
+                  <span id="ageValue" class="portfolio-description"> </span>
+                </p>
+                <p id="email" class="portfolio-title">
+                  <strong>Email:</strong>
+                  <span>
+                    <a href="mailto:" id="emailValue"></a>
+                  </span>
+                </p>
+                <p id="education" class="portfolio-title">
+                  <strong>education:</strong>
+                  <span id="educationValue"> </span>
+                </p>
+                <p id="github" class="portfolio-title">
+                  <strong>github:</strong>
+                  <span>
+                    <a href="http://" id="githubValue"
+                      ><img
+                        id="githubPicture"
+                        alt="github Picture"
+                        class="img-fluid h-25 w-25 portfolio-image"
+                        src="./media/githubThumb.jpg"
+                    /></a>
+                  </span>
+                </p>
+                <p id="linkedIn" class="portfolio-title">
+                  <strong>linkedIn:</strong>
+                  <span>
+                    <a href="http://" id="linkedInValue"
+                      ><img
+                        id="linkedInPicture"
+                        alt="linkedIn Picture"
+                        class="img-fluid h-25 w-25 portfolio-image"
+                        src="./media/linkedInThumb.png"
+                    /></a>
+                  </span>
+                </p>
+                
               </div>
             </div>
           </div>
-          <!-- weather div -->
-          <div id="weather" class="card shadow p-4" id="weather-card">
-            <div class="card-body text-center">
-              <h5 class="card-title">Loading weather...</h5>
+          <div id="containerPortfolio2">
+            <!-- block of the pic on the left and name on the right -->
+            <div class="row" id="titlePicAndFullName">
+              <div
+                class="col-md-6 d-flex justify-content-center align-items-center"
+              >
+                <h2 id="fullName">Full Name</h2>
+              </div>
+              <div
+                class="col-md-4 d-flex justify-content-center align-items-center"
+              >
+                <img
+                  id="profilePicture"
+                  alt="Profile Picture"
+                  class="img-fluid rounded-circle h-50 w-30"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- left column with about -->
+              <div
+                class="col-md-6 d-flex justify-content-center align-items-center"
+              >
+                <div id="aboutContainer">
+                  <h3>About Me</h3>
+                  <p id="aboutMe">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+              <!-- right column with details and skills -->
+              <div
+                class="col-md-4 d-flex justify-content-center align-items-center"
+              >
+                <div id="detailsContainer">
+                  <p id="age">
+                    <strong>age:</strong>
+                    <span id="ageValue"> </span>
+                  </p>
+                  <p id="email">
+                    <strong>Email:</strong>
+                    <span>
+                      <a href="mailto:" id="emailValue"></a>
+                    </span>
+                  </p>
+                  <p id="github">
+                    <strong>github:</strong>
+                    <span>
+                      <a href="http://" id="githubValue"></a>
+                    </span>
+                  </p>
+                  <p id="linkedIn">
+                    <strong>linkedIn:</strong>
+                    <span>
+                      <a href="http://" id="linkedInValue"></a>
+                    </span>
+                  </p>
+                  <p id="education">
+                    <strong>education:</strong>
+                    <span id="educationValue"> </span>
+                  </p>
+                  <h3>skills</h3>
+                  <p id="skills">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!-- exchange section -->
-      <div id="containerExchange">
-        <h1>Currency Exchange</h1>
-        <br />
-        <h3>From Currency</h3>
-        <div class="container" id="sourceContainer">
-          <div class="currency-row">
-            <label class="currency-label"
-              ><input type="radio" name="currencyType" onchange="toggleInput(this)" />USD</label
-            >
-            <input
-              type="number"
-              class="currency-amount"
-              min="0.01"
-              step="0.01"
-              disabled
-            />
-          </div>
-          <div class="currency-row">
-            <label class="currency-label"
-              ><input type="radio" name="currencyType" onchange="toggleInput(this)" />ILS</label
-            >
-            <input
-              type="number"
-              class="currency-amount"
-              min="0.01"
-              step="0.01"
-              disabled
-            />
-          </div>
-          <div class="currency-row">
-            <label class="currency-label"
-              ><input type="radio" name="currencyType" onchange="toggleInput(this)" />EUR</label
-            >
-            <input
-              type="number"
-              class="currency-amount"
-              min="0.01"
-              step="0.01"
-              disabled
-            />
-          </div>
-          <div class="currency-row">
-            <label class="currency-label"
-              ><input type="radio" name="currencyType" onchange="toggleInput(this)" />JPY</label
-            >
-            <input
-              type="number"
-              class="currency-amount"
-              min="0.01"
-              step="0.01"
-              disabled
-            />
-          </div>
-        </div>
+          <!-- weather section -->
+          <div id="containerWeather">
+            <!-- radio choice for city -->
 
-        <div class="container" id="targetContainer">
-          <h3>To Currency</h3>
-          <div class="currency-row">
-            <label class="currency-label"
-              ><input type="checkbox" onchange="convert()" />USD</label
+            <div
+              class="card bg-light d-flex justify-content-center align-items-center vh-100"
             >
-            <span class="converted"></span>
+              <h1>Weather</h1>
+              <!-- radio div -->
+              <div class="col-md-7">
+                <div class="card" id="cityContainer">
+                  <h3>Select a city</h3>
+                  <div class="city-row">
+                    <label class="city-label"
+                      ><input
+                        checked
+                        type="radio"
+                        name="city"
+                        value="Tel Aviv"
+                      />Tel Aviv</label
+                    >
+                    <label class="city-label"
+                      ><input type="radio" name="city" value="New York" />New
+                      York</label
+                    >
+                    <label class="city-label"
+                      ><input
+                        type="radio"
+                        name="city"
+                        value="Tokyo"
+                      />Tokyo</label
+                    >
+                    <label class="city-label"
+                      ><input
+                        type="radio"
+                        name="city"
+                        value="London"
+                      />London</label
+                    >
+                    <label class="city-label"
+                      ><input
+                        type="radio"
+                        name="city"
+                        value="Paris"
+                      />Paris</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- weather div -->
+              <div id="weather" class="card shadow p-4" id="weather-card">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Loading weather...</h5>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="currency-row">
-            <label class="currency-label"
-              ><input type="checkbox" onchange="convert()" />ILS</label
-            >
-            <span class="converted"></span>
-          </div>
-          <div class="currency-row">
-            <label class="currency-label"
-              ><input type="checkbox" onchange="convert()" />EUR</label
-            >
-            <span class="converted"></span>
-          </div>
-          <div class="currency-row">
-            <label class="currency-label"
-              ><input type="checkbox" onchange="convert()" />JPY</label
-            >
-            <span class="converted"></span>
+
+          <!-- exchange section -->
+          <div id="containerExchange">
+            <h1>Currency Exchange</h1>
+            <br />
+            <h3>From Currency</h3>
+            <div class="container" id="sourceContainer">
+              <div class="currency-row">
+                <label class="currency-label"
+                  ><input
+                    type="radio"
+                    name="currencyType"
+                    onchange="toggleInput(this)"
+                  />USD</label
+                >
+                <input
+                  type="number"
+                  class="currency-amount"
+                  min="0.01"
+                  step="0.01"
+                  disabled
+                />
+              </div>
+              <div class="currency-row">
+                <label class="currency-label"
+                  ><input
+                    type="radio"
+                    name="currencyType"
+                    onchange="toggleInput(this)"
+                  />ILS</label
+                >
+                <input
+                  type="number"
+                  class="currency-amount"
+                  min="0.01"
+                  step="0.01"
+                  disabled
+                />
+              </div>
+              <div class="currency-row">
+                <label class="currency-label"
+                  ><input
+                    type="radio"
+                    name="currencyType"
+                    onchange="toggleInput(this)"
+                  />EUR</label
+                >
+                <input
+                  type="number"
+                  class="currency-amount"
+                  min="0.01"
+                  step="0.01"
+                  disabled
+                />
+              </div>
+              <div class="currency-row">
+                <label class="currency-label"
+                  ><input
+                    type="radio"
+                    name="currencyType"
+                    onchange="toggleInput(this)"
+                  />JPY</label
+                >
+                <input
+                  type="number"
+                  class="currency-amount"
+                  min="0.01"
+                  step="0.01"
+                  disabled
+                />
+              </div>
+            </div>
+
+            <div class="container" id="targetContainer">
+              <h3>To Currency</h3>
+              <div class="currency-row">
+                <label class="currency-label"
+                  ><input type="checkbox" onchange="convert()" />USD</label
+                >
+                <span class="converted"></span>
+              </div>
+              <div class="currency-row">
+                <label class="currency-label"
+                  ><input type="checkbox" onchange="convert()" />ILS</label
+                >
+                <span class="converted"></span>
+              </div>
+              <div class="currency-row">
+                <label class="currency-label"
+                  ><input type="checkbox" onchange="convert()" />EUR</label
+                >
+                <span class="converted"></span>
+              </div>
+              <div class="currency-row">
+                <label class="currency-label"
+                  ><input type="checkbox" onchange="convert()" />JPY</label
+                >
+                <span class="converted"></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

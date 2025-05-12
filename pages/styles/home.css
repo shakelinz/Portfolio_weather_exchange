@@ -111,8 +111,6 @@ span {
 #containerPortfolio1,
 #containerPortfolio2 {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
   padding: 2rem;
   margin: 2rem auto;
   max-width: 1000px;
@@ -202,4 +200,46 @@ span {
 #containerHello,
 #containerUser {
   margin-top: 3rem;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+.portfolio-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffff;
+  object-fit: cover;
+}
+
+.portfolio-description {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 800px;
+}
+
+.portfolio-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+  margin-bottom: 0.5rem;
 }
