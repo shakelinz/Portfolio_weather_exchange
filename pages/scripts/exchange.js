@@ -4,8 +4,9 @@ const rates = {
   euro: { usd: 1.08, il: 3.9, yen: 167, euro: 1 },
   yen: { usd: 0.0064, il: 0.023, euro: 0.006, yen: 1 },
 };
-const conversionAPI =
-  "https://v6.exchangerate-api.com/v6/500148fc1fef7fc0692f3680/latest";
+const key ="2834f319bc99ac6cfd88bad9";
+let conversionAPI =
+  `https://v6.exchangerate-api.com/v6/${key}/latest`;
 // list of currencies
 const currencies = ["USD", "ILS", "EUR", "JPY"];
 // fetch api on load
