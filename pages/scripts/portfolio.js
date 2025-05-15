@@ -18,7 +18,13 @@ export function fillPortfolio(id) {
     container.querySelector("#educationValue").innerText =
         currentUser.education;
     container.querySelector("#aboutMe").innerText = currentUser.aboutParagraph;
-    container.querySelector("#skills").innerText = currentUser.skills;
+    container.querySelector("#skills").innerHTML = ""; // Clear previous skills
+    const listContainer = container.querySelector("#skills");
+    currentUser.skills.forEach(skill => {
+      const listItem = document.createElement("li");
+      listItem.textContent = skill;
+      listContainer.appendChild(listItem);
+    });
     container.querySelector("#profilePicture").src = currentUser.picture;
   }
 }
